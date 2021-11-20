@@ -53,7 +53,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               icon: Icon(Icons.person_rounded), label: "Profile")
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Color(0xFF4960a3),
         onTap: _onItemTapped,
       ),
     );

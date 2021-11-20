@@ -8,7 +8,7 @@ class Shop extends StatelessWidget {
   Widget build(BuildContext context) {
     final children = <Widget>[
       Card(
-          color: Colors.amber[600],
+          elevation: 5,
           child: InkWell(
             onTap: () {
               // Navigate to card
@@ -63,7 +63,7 @@ class Shop extends StatelessWidget {
             ),
           )),
       Card(
-          color: Colors.amber[600],
+          elevation: 5,
           child: InkWell(
             onTap: () {
               // Navigate to card
@@ -118,7 +118,7 @@ class Shop extends StatelessWidget {
             ),
           )),
       Card(
-          color: Colors.amber[600],
+          elevation: 5,
           child: InkWell(
             onTap: () {
               // Navigate to card
@@ -173,7 +173,7 @@ class Shop extends StatelessWidget {
             ),
           )),
       Card(
-          color: Colors.amber[600],
+          elevation: 5,
           child: InkWell(
             onTap: () {
               // Navigate to card
@@ -228,7 +228,7 @@ class Shop extends StatelessWidget {
             ),
           )),
       Card(
-          color: Colors.amber[600],
+          elevation: 5,
           child: InkWell(
             onTap: () {
               // Navigate to card
@@ -283,7 +283,7 @@ class Shop extends StatelessWidget {
             ),
           )),
       Card(
-          color: Colors.amber[600],
+          elevation: 5,
           child: InkWell(
             onTap: () {
               // Navigate to card
