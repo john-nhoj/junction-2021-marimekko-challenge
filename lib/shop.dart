@@ -6,6 +6,8 @@ class Shop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const _titleTextDecoration = TextStyle(
+        color: Color(0xFF4960a3), fontSize: 25, fontWeight: FontWeight.bold);
     final children = <Widget>[
       Card(
           elevation: 5,
@@ -15,7 +17,10 @@ class Shop extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute<void>(
                 builder: (BuildContext context) => Scaffold(
                   appBar: AppBar(
-                    title: const Text('second Page'),
+                    title: const Text('Ohikulkeva Kivet'),
+                    backgroundColor: Colors.white,
+                    titleTextStyle: _titleTextDecoration,
+                    iconTheme: const IconThemeData(color: Color(0xFF4960a3)),
                   ),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -70,7 +75,10 @@ class Shop extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute<void>(
                 builder: (BuildContext context) => Scaffold(
                   appBar: AppBar(
-                    title: const Text('second Page'),
+                    title: const Text('Kulkeville Kivet'),
+                    backgroundColor: Colors.white,
+                    titleTextStyle: _titleTextDecoration,
+                    iconTheme: const IconThemeData(color: Color(0xFF4960a3)),
                   ),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -125,7 +133,10 @@ class Shop extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute<void>(
                 builder: (BuildContext context) => Scaffold(
                   appBar: AppBar(
-                    title: const Text('second Page'),
+                    title: const Text('Pituus Kivet'),
+                    backgroundColor: Colors.white,
+                    titleTextStyle: _titleTextDecoration,
+                    iconTheme: const IconThemeData(color: Color(0xFF4960a3)),
                   ),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -180,7 +191,10 @@ class Shop extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute<void>(
                 builder: (BuildContext context) => Scaffold(
                   appBar: AppBar(
-                    title: const Text('second Page'),
+                    title: const Text('Loiva Ruutu-Unikko'),
+                    backgroundColor: Colors.white,
+                    titleTextStyle: _titleTextDecoration,
+                    iconTheme: const IconThemeData(color: Color(0xFF4960a3)),
                   ),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -235,7 +249,10 @@ class Shop extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute<void>(
                 builder: (BuildContext context) => Scaffold(
                   appBar: AppBar(
-                    title: const Text('second Page'),
+                    title: const Text('Lehmus Mini Unikko'),
+                    backgroundColor: Colors.white,
+                    titleTextStyle: _titleTextDecoration,
+                    iconTheme: const IconThemeData(color: Color(0xFF4960a3)),
                   ),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -290,7 +307,10 @@ class Shop extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute<void>(
                 builder: (BuildContext context) => Scaffold(
                   appBar: AppBar(
-                    title: const Text('second Page'),
+                    title: const Text('Palokärki'),
+                    backgroundColor: Colors.white,
+                    titleTextStyle: _titleTextDecoration,
+                    iconTheme: const IconThemeData(color: Color(0xFF4960a3)),
                   ),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
