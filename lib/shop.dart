@@ -5,6 +5,64 @@ class Shop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final children = <Widget>[];
+    for (var i = 0; i < 10; i++) {
+      children.add(Card(
+          color: Colors.amber[600],
+          child: InkWell(
+            onTap: () {
+              // Navigate to card
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                builder: (BuildContext context) => Scaffold(
+                  appBar: AppBar(
+                    title: const Text('second Page'),
+                  ),
+                  body: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Hero(
+                        tag: 'hero-rectangle-$i',
+                        child: const Image(
+                          image:
+                              NetworkImage('https://picsum.photos/250?image=9'),
+                          fit: BoxFit.cover,
+                          width: double.infinity,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ));
+            },
+            child: Column(
+              children: [
+                Expanded(
+                  child: Hero(
+                    tag: 'hero-rectangle-$i',
+                    child: const Image(
+                      image: NetworkImage('https://picsum.photos/250?image=9'),
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  width: double.infinity,
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text("Location:"),
+                        const SizedBox(height: 8),
+                        Text("Price: ")
+                      ]),
+                )
+              ],
+            ),
+          )));
+    }
+
     return Scaffold(
         appBar: AppBar(
           title: Text("Mari n Go"),
@@ -15,63 +73,7 @@ class Shop extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           crossAxisSpacing: 5.0,
           mainAxisSpacing: 5.0,
-          children: [
-            Card(
-                color: Colors.amber[600],
-                child: InkWell(
-                  onTap: () {
-                    // Navigate to card
-                    Navigator.of(context).push(MaterialPageRoute<void>(
-                      builder: (BuildContext context) => Scaffold(
-                        appBar: AppBar(
-                          title: const Text('second Page'),
-                        ),
-                        body: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: const <Widget>[
-                            Hero(
-                              tag: 'hero-rectangle',
-                              child: Image(
-                                image: NetworkImage(
-                                    'https://picsum.photos/250?image=9'),
-                                fit: BoxFit.cover,
-                                width: double.infinity,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ));
-                  },
-                  child: Column(
-                    children: [
-                      const Expanded(
-                        child: Hero(
-                          tag: "hero-rectangle",
-                          child: Image(
-                            image: NetworkImage(
-                                'https://picsum.photos/250?image=9'),
-                            fit: BoxFit.cover,
-                            width: double.infinity,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8.0),
-                        width: double.infinity,
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: const [
-                              Text("Location:"),
-                              const SizedBox(height: 8),
-                              Text("Price: ")
-                            ]),
-                      )
-                    ],
-                  ),
-                )),
-          ],
+          children: children,
         ));
   }
 }
