@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/profile.dart';
+import 'package:myapp/shop.dart';
 import 'package:myapp/wardrobe.dart';
-
-import 'home.dart';
-import 'profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +27,7 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
-    Home(),
+    Shop(),
     WardRobe(),
     Profile()
   ];
@@ -46,9 +45,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "Shop"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_rounded), label: "Wardrobe"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_rounded), label: "Profile")
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag), label: "Shop"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_rounded), label: "Wardrobe"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_rounded), label: "Profile")
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
