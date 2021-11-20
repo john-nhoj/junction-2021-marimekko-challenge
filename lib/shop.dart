@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Shop extends StatelessWidget {
   const Shop({Key? key}) : super(key: key);
@@ -345,7 +346,12 @@ class Shop extends StatelessWidget {
               color: Color(0xFF4960a3),
               fontSize: 25,
               fontWeight: FontWeight.bold),
-          title: const Text("Mari n Go"),
+          title: SvgPicture.network(
+            'https://www.marimekko.com/static/version1637055171/frontend/Improove/marimekko2/en_GB/images/logo.svg',
+            placeholderBuilder: (BuildContext context) => Container(
+                padding: const EdgeInsets.all(30.0),
+                child: const CircularProgressIndicator()),
+          ),
           backgroundColor: Colors.white,
         ),
         body: GridView.count(
